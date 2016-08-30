@@ -6,12 +6,12 @@ if %mesto% equ 2 goto rabota
 
 :dom
 set IFACE="local"
-set IP=10.160.100.9
-set MASK=255.255.255.0
-set GATEWAY=10.160.100.1
+set IP=10.9.15.93
+set MASK=255.255.255.248
+set GATEWAY=10.9.15.94
 set GWMETRIC=1
-set DNS1=10.160.100.1
-set MAC=001122334455
+set DNS1=90.188.32.22
+rem set MAC=001122334455
 goto smena
 
 :rabota
@@ -21,13 +21,13 @@ set MASK=255.255.255.0
 set GATEWAY=192.168.1.1
 set GWMETRIC=1
 set DNS1=192.168.1.10
-set MAC=221133004455
+rem set MAC=221133004455
 goto smena 
 
 :smena
-echo Меняем MAC адрес на %MAC%
-echo _____
-macshift -i "local" %MAC%
+rem echo Меняем MAC адрес на %MAC%
+rem echo _____
+rem macshift -i "local" %MAC%
 
 echo _____
 echo Устанавливаем IP адрес-%IP%
