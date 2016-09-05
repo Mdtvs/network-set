@@ -16,9 +16,9 @@ goto smena
 
 :rabota
 set IFACE="local"
-set IP=192.168.1.91
+set IP=10.9.10.115
 set MASK=255.255.255.0
-set GATEWAY=192.168.1.1
+set GATEWAY=10.9.10.254
 set GWMETRIC=1
 set DNS1=192.168.1.10
 rem set MAC=221133004455
