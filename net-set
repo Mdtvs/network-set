@@ -1,6 +1,6 @@
 @echo off
 set /p mesto="choice your settings (1 - home, 2 - work): "
-echo Выбраны настройки - %mesto%
+echo your had - %mesto%
 
 if %mesto% equ 2 goto rabota
 
