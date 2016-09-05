@@ -1,5 +1,5 @@
 @echo off
-set /p mesto="Выберите настройки (1 - дом, 2 - работа): "
+set /p mesto="choice your settings (1 - home, 2 - work): "
 echo Выбраны настройки - %mesto%
 
 if %mesto% equ 2 goto rabota
@@ -30,16 +30,16 @@ rem echo _____
 rem macshift -i "local" %MAC%
 
 echo _____
-echo Устанавливаем IP адрес-%IP%
-echo Маску подсети-%MASK%
-echo Основной Шлюз-%GATEWAY%
+echo seting ip address-%IP%
+echo subnetmask-%MASK%
+echo native gateway-%GATEWAY%
 
 netsh interface ip set address name=%IFACE% source=static addr=%IP% mask=%MASK% gateway=%GATEWAY% gwmetric=%GWMETRIC%
 
-echo Устанавливаем основной DNS сервер %DNS1%
+echo setting  DNS server %DNS1%
 netsh interface ip set dns name=%IFACE% source=static addr=%DNS1% register=PRIMARY
 
-echo Настройки сети изменены:
+echo settings has been changed:
 ipconfig /all
 echo _____
 pause
