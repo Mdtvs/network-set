@@ -1,0 +1,1 @@
+netsh interface ip set address name=eth0 source=static addr=192.168.221.2 mask=255.255.255.0 gateway=0.0.0.0 gwmetric=1
